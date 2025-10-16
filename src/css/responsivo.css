@@ -1,0 +1,133 @@
+@media screen and (max-width: 1020px) {
+
+    /* classes gerais */
+    .flex {
+        flex-direction: column;
+    }
+
+    h2.titulo {
+        font-size: 39px;
+    }
+
+    .topo-do-site .flex {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+
+    /* cabeçalho */
+    .menu-desktop,
+    .btn-contato {
+        display: none;
+    }
+
+    .btn-abrir-menu {
+        display: block;
+        /* ESSA É A LINHA QUE FAZ AS BARRAS APARECEREM */
+    }
+
+    /* Adicione este código dentro da sua media query */
+
+    /* Ajustes para um cabeçalho menor no mobile */
+    header {
+        padding: 10px 4%;
+        /* Diminui o espaçamento interno vertical de 20px para 10px */
+    }
+
+    .logo img {
+        width: 120px;
+        /* Diminui um pouco o tamanho da logo de 150px para 120px */
+    }
+
+    main {
+        padding-top: 80px;
+        /* IMPORTANTE: Reduz o espaçamento do topo para combinar com o novo cabeçalho */
+    }
+
+    /* topo do site */
+    section.topo-do-site {
+        width: 100%;
+        padding: 20px 10px;
+        box-sizing: border-box;
+    }
+
+    .topo-do-site h1 {
+        font-size: 28px;
+        line-height: 1.2;
+        word-break: break-word;
+    }
+
+    .txt-topo-site .btn-contato {
+        display: block;
+        margin-top: 20px;
+    }
+
+    .txt-topo-site {
+        text-align: center;
+        width: 100%;
+        max-width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+        text-align: left;
+    }
+
+    .topo-do-site p {
+        width: 100%;
+        font-size: 16px;
+        line-height: 1.5;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        margin: 10px 0;
+    }
+
+    /* ajuste da imagem */
+    .img-topo-site img {
+        width: 100%;
+        /* Ajustado para 100% para ser mais responsivo */
+        height: auto;
+        /* Altura automática para manter proporção */
+        margin: 0;
+    }
+
+    /* ESPECIALIDADES */
+    section.especialidades {
+        padding: 40px 8%;
+    }
+
+    /* SOBRE */
+    section.sobre {
+        padding: 60px 4%;
+    }
+
+    .img-sobre img {
+        width: 100%;
+    }
+
+    /* PORTIFOLIO */
+    section.portifolio {
+        padding: 80px 8%;
+    }
+
+    .img-port {
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+        height: 460px;
+    }
+
+    section.portifolio .flex {
+        gap: 80px;
+    }
+
+    /* Rodape */
+    footer .flex {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    footer .line-footer p {
+        /* Corrigido de flooter para footer */
+        text-align: center;
+    }
+}

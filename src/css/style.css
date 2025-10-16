@@ -1,0 +1,494 @@
+/*ESTILO GERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    body {
+        font-family: 'Poppins', sans-serif;
+    }
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+
+}
+
+body {
+    background-color: #000;
+    height: 100vh;
+}
+
+.interface {
+    max-width: 1280px;
+    margin: auto;
+
+}
+
+.flex {
+    display: flex;
+}
+
+.btn-contato button {
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: rgb(32, 173, 239);
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+h2.titulo {
+    color: #fff;
+    font-size: 38px;
+    text-align: center;
+}
+
+h2.titulo span {
+    color: aqua;
+}
+
+button:hover,
+form .btn-enviar input:hover {
+    box-shadow: 0px 0px 8px #d3cdff;
+    transform: scale(1.25);
+    transition: .05s;
+}
+
+/* ESTILO DO CABEÇARIO */
+header {
+    padding: 20px 4%; /* Ajustei o padding para o cabeçalho fixo */
+    position: fixed; /* Fixa o cabeçalho no topo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Garante que o cabeçalho fique sobre outros elementos */
+    background-color: #000000; /* Adiciona um fundo para não ficar transparente */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra sutil */
+}
+
+main {
+    padding-top: 120px; /* Ajuste este valor conforme a altura do seu cabeçalho */
+}
+
+header>.interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+header a {
+    color: #5d5d5d;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+header a:hover {
+    color: #fff;
+    transform: scale(1.25);
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: inline-block;
+    padding: 0 40px;
+}
+
+
+
+
+
+
+
+/* ESTILO TOPO DO SITE */
+section.topo-do-site {
+    padding: 40px 4%;
+}
+
+section.topo-do-site .flex {
+    display: flex;
+    align-items: center;
+    /* centraliza verticalmente */
+    justify-content: space-between;
+    /* espaço entre texto e imagem */
+    flex-wrap: wrap;
+    /* permite que texto e imagem quebrem em telas pequenas */
+    gap: 20px;
+    /* espaço entre eles */
+}
+
+
+
+/* Largura do texto */
+.txt-topo-site {
+    flex: 1 1 400px;
+    /* cresce, encolhe, largura mínima 400px */
+}
+
+/* Largura da imagem */
+.img-topo-site {
+    flex: 0 0 auto;
+    /* não encolhe */
+}
+
+/* Tamanho grande — topo do site mais impactante */
+.img-topo-site img {
+    width: 640px;
+    /* largura maior */
+    height: 480px;
+    /* altura proporcional */
+    object-fit: contain;
+    display: block;
+    background-color: transparent;
+}
+
+
+.topo-do-site h1 {
+    color: #fff;
+    font-size: 42px;
+    line-height: 40px;
+
+}
+
+.topo-do-site h1 span {
+    color: aqua;
+    font-size: 65px;
+}
+
+.topo-do-site p {
+    color: #fff;
+    margin: 40px 0;
+
+
+}
+
+.topo-do-site .img-topo-site img {
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+/* Adicione este código no seu arquivo style.css */
+
+/* ESTILOS PARA O MENU MOBILE */
+
+.btn-abrir-menu {
+    display: none; /* Esconde o botão em telas grandes */
+    color: #fff;  /* Garante que o ícone seja branco e visível no fundo preto */
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.menu-mobile {
+    background-color: #000;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%; /* Começa escondido */
+    overflow: hidden; /* Esconde o conteúdo que transborda */
+    transition: .5s; /* Animação suave */
+}
+
+.menu-mobile.abrir-menu {
+    width: 70%; /* Largura do menu quando aberto */
+}
+
+.menu-mobile.abrir-menu ~ .overlay-menu {
+    display: block;
+}
+
+.menu-mobile .btn-fechar {
+    padding: 20px 5%;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.menu-mobile nav ul {
+    text-align: right;
+}
+
+.menu-mobile nav ul li a {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 8%;
+    display: block;
+}
+
+.menu-mobile nav ul li a:hover {
+    background-color: rgb(32, 173, 239);
+    color: #000;
+}
+
+.overlay-menu {
+    background-color: #000000a7;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88888;
+    display: none;
+}
+
+/* animaçao */
+@keyframes flutuar {
+    0% {
+        top: 0;
+
+    }
+
+    100% {
+        top: 30px;
+    }
+}
+
+/* BLOCO DE ESPECIALIDADES */
+section.especialidades {
+    padding: 40px 4%;
+}
+
+section.especialidades .flex {
+    gap: 40px;
+
+}
+
+.especialidades .especialidades-box {
+    color: #fff;
+    padding: 40px;
+    margin-top: 45px;
+    border-radius: 20px;
+    transition: .2S;
+}
+
+.especialidades .especialidades-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 8px #ffffff;
+}
+
+.especialidades .especialidades-box i {
+    font-size: 78px;
+    color: rgb(32, 173, 239);
+}
+
+.especialidades .especialidades-box h3 {
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+
+/* estilo do sobre  */
+/* Imagem da section sobre */
+.img-sobre img {
+    width: 480px;
+    /* aumenta a largura */
+    height: auto;
+    /* mantém proporção */
+    object-fit: contain;
+    /* garante que a imagem não distorça */
+    display: block;
+    /* remove possíveis espaços embaixo */
+}
+
+section.sobre {
+    padding: 60px 4%;
+    color: #fff;
+}
+
+section.sobre .flex {
+    align-items: center;
+    /* alinha imagem e texto na mesma altura */
+    gap: 40px;
+    /* espaço entre eles */
+}
+
+.sobre .txt-sobre h2 {
+    font-size: 50px;
+    line-height: 50px;
+    margin-bottom: 20px;
+}
+
+.sobre .txt-sobre h2 span {
+    color: aqua;
+    display: block;
+
+}
+
+.sobre .txt-sobre p {
+    margin: 20px 0;
+    text-align: justify;
+}
+
+.btn-social button {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    border: none;
+    background-color: aqua;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0 5px;
+
+}
+
+/* ESTILO DO PORTIFOLIO */
+section.portifolio {
+    padding: 80px 4%;
+    box-shadow: 0 0 40px 10px #0060f142;
+}
+
+section.portifolio .flex {
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+.img-port {
+    width: 360px;
+    height: 460px;
+    background-color: aqua;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 6s;
+    cursor: pointer;
+    border-radius: 40px;
+    position: relative;
+}
+
+.img-port:hover {
+    background-position: 100% 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.753);
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    font-weight: 600px;
+    color: #fff;
+    opacity: 0;
+    transition: .5s;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+/*  formulario de contato*/
+section.formulario {
+    padding: 80px 4%;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    background-color: #252525;
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: aqua;
+    font-size: 18px;
+}
+
+form textarea {
+    resize: none;
+    max-height: 200px;
+}
+
+form .btn-enviar {
+    margin-top: 25px;
+    text-align: center;
+}
+
+form .btn-enviar input[type=submit] {
+    width: 120px;
+    color: #000000;
+    background-color: aqua;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s;
+}
+
+
+
+
+
+
+
+
+/* rodape */
+
+
+
+.logo-footer img {
+    width: 150px;
+    height: auto;
+
+}
+
+footer {
+    padding: 40px 4%;
+    box-shadow: 0 0 40px 10px #0060f1a4;
+}
+
+footer .flex {
+    justify-content: space-between;
+
+}
+
+footer .line-footer {
+    color: aqua;
+    font-size: 20px 0;
+}
+
+.borda {
+    border-top: 2px solid #252525;
+}
+
+
+
+footer .line-footer p i {
+    color: aqua;
+    font-size: 35px;
+
+}
+
+
+
+footer .line-footer a {
+    color: aqua;
+    cursor: pointer;
+    padding: 5px;
+
+}
